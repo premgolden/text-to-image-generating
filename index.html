@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Image Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text to Image Generator</h1>
+        <input type="text" id="inputTxt" placeholder="Enter your description here...">
+        <button id="btn">Generate Image</button>
+        
+        <div id="outputSection" class="output-section">
+            <!-- Loading Spinner & Message -->
+            <div id="loadingSpinner" class="loading-spinner">
+                <div class="spinner"></div>
+                <p id="loadingMessage">Image is generating...</p>
+            </div>
+            
+            <!-- Timer -->
+            <p id="timer" class="timer"></p>
+            
+            <!-- Image will be displayed here -->
+            <img id="generatedImage" src="" alt="Generated Image" style="display:none;">
+            
+            <!-- Download Button -->
+            <a id="downloadButton" href="#" download="generated_image.jpg" style="display:none;">
+                <button class="download-btn">Download Image</button>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made by <span class="highlight">Prem Golden</span></p>
+        <p>Follow me on <a href="https://instagram.com/premgolden" target="_blank" class="instagram-link">Instagram</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

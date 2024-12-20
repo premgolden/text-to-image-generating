@@ -1,0 +1,198 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1b2735 0%, #090a0f 100%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Glowing Effect for Text */
+h1 {
+    font-size: 3rem;
+    color: #d1d1d1;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Input Field */
+input {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    background-color: #121212;
+    color: #fff;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Button Styling */
+button {
+    background-color: #6a3d9a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #8c56c1;
+    transform: scale(1.1);
+}
+
+/* Output Section */
+.output-section {
+    margin-top: 20px;
+    position: relative;
+}
+
+#loadingSpinner {
+    display: none;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+}
+
+#loadingSpinner .spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #6a3d9a;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+#loadingMessage {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    animation: flicker 0.5s step-start infinite;
+}
+
+#timer {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+#generatedImage {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+    display: none;
+}
+
+/* Download Button Styling */
+.download-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #aaa;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 5px;
+}
+
+footer .highlight {
+    font-weight: bold;
+    color: #ff4da6;
+    text-shadow: 0 0 15px #ff4da6;
+}
+
+/* Instagram Link Styling */
+.instagram-link {
+    color: #ff4da6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.instagram-link:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #ff4da6;
+    transform: scale(1.1);
+}
+
+/* Spin animation for the loading spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Flicker effect for loading text */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
